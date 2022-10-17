@@ -1,0 +1,42 @@
+
+form {
+    width: 900px;
+    margin: auto;
+}
+input , textarea{
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    background-color: rgba(255,255,255,.8);
+}
+input:hover , textarea 
+{
+    background-color:#dddddd ;
+}
+legend  {
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+
+}
+fieldset {
+    border-color: #cecece;
+    margin: 30px;
+    
+}
+fieldset#sexo {
+    width: 300px;
+}
+fieldset#usuario{
+    background: url(/cursoemvideo/html20016/projeto-glass-html5/_imagens/icone-contato.png)no-repeat 95% 95%;
+}
+fieldset#endereco{
+    background: url(/cursoemvideo/html20016/projeto-glass-html5/_imagens/icone-endereco.png)no-repeat 95% 95%;
+}
+fieldset#mensagem{
+    background: url(/cursoemvideo/html20016/projeto-glass-html5/_imagens/icone-mensagem.png)no-repeat 95% 95%;
+}
+fieldset#pedido{
+    background: url(/cursoemvideo/html20016/projeto-glass-html5/_imagens/icone-pagamento.png)no-repeat 95% 95%;
+}

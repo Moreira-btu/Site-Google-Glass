@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre Google Glass!</title>
+    <link rel="stylesheet" href="/_css/estilo.css">
+    <link rel="stylesheet" href="/_css/form.css">
+    <script src="/_javascript/funcoes.js"></script>
+    <script>
+/* calcular total de oculos escolhido pelo cliente*/
+
+        function calc_total(){
+           var qtd=parseInt(document.getElementById('cQuant').value);
+           tot = qtd*1500;
+           document.getElementById('cPr').value = tot;
+        }
+    </script>
+    
+</head>
+
+
+<body>
+   <div id="interface">
+<header id="cabecalho">
+    <hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+<img id="icone" src="/_imagens/contato.png" alt="contato">
+
+<nav id="menu">
+    <!-- configuração do menu interativo -->
+<h1>Menu Principal</h1>
+<ul>
+<li onmouseout="mudaFoto('/_imagens/contato.png')" onmouseover="mudaFoto('/_imagens/home.png')"><a href="/index.html"> Home</a></li>
+
+<li onmouseout="mudaFoto('/_imagens/contato.png')" onmouseover="mudaFoto('/_imagens/especificacoes.png')"><a href="/specs.html"> Especificações</a></li>
+
+<li onmouseout="mudaFoto('/_imagens/contato.png')"  onmouseover="mudaFoto('/_imagens/fotos.png')"><a href="/fotos.html"> Fotos</a></li>
+
+<li onmouseout="mudaFoto('/_imagens/contato.png')" onmouseover="mudaFoto('/_imagens/multimidia.png')"><a href="/multimidia.html"> Multimídia</a></li>
+
+<li onmouseout="mudaFoto('/_imagens/contato.png')" onmouseover="mudaFoto('/_imagens/contato.png')"><a href="/fale-conosco.html"> Fale conosco</a></li> 
+</ul>
+
+  <!---->
+</header></nav>
+<section id="corpo-full">
+    <article id="principal">
+        <header id="cabecalho-artigo">
+<hgroup>
+<h3>Fale Conosco > Contato</h3>
+<h1>Formulário de Contato</h1>
+<h2>por Alex Moreira</h2>
+<h3 class="direita">Atualizado em 23/setembro/2022</h3>
+</hgroup>
+</header>
+<div id="tv-radio">
+
+<!-- formulario completo-->
+
+<article>
+
+<form action="" method="post" id="formulario" oninput="calc_total();" >
+<fieldset id="usuario">
+<legend>Identificação do Usuário</legend>
+   <p><label for="cname"> Nome:</label> <input type="text"name="tnome" id="cname" size="30" maxlength="30" placeholder="Nome Completo"></p>
+    <p><label for="senha">  Senha:</label><input id="senha" type="password" size="10" maxlength="8" placeholder="8 digitos"></p>
+    <p> <label for="e-mail"> E-mail: </label><input id="e-mail" type="email"size="50" maxlength="40" placeholder="usuario@hotmail.com.br"> </p>
+</fieldset>
+   <fieldset id="sexo"><legend> Sexo:</legend>
+        <input type="radio" name="tsexo" id="cmasc" checked> <label for="cmasc"> Masculino</label>
+        <input type="radio"name="tsexo" id="cfem">    <label for="cfem"> Feminino</label> 
+        </fieldset>
+        <fieldset>
+   <p><label for="cnasc"> Data de Nascimento:</label> <input type="date" nome="tnasc" id="cnasc"> </p>
+</fieldset>
+<fieldset id="endereco">
+<legend> Endereço do Usuário</legend>
+   <p><label for="crua"> Logradouro:</label> <input type="text" size="40" maxlength="80" placeholder="Rua , Av ,Travessa ,etc.." id="crua" name="trua"></p>
+   <p><label for="tnumb">  Número:</label> <input type="number" min="0" max="9999" name="tnumb " id="tnumb" ></p>
+   <p> <label for="cestado"> Estado: <select name="testado" id="cestado" >
+
+<optgroup label="Região Sudeste">
+    <option value="RJ">
+        Rio de Janeiro </option>
+     <option value="Sp" selected >  São Paulo</option> 
+      <option value= "MG">Minas Gerais</option>
+      <option value="PR"> Paraná</option></optgroup>
+      <optgroup label="Região Sul">
+      <option value="SC">Santa Catarina</option>
+      <option value="RS">Rio Grande Do Sul</option></optgroup>
+   </select></label></p> 
+    <!--data list -->
+   <p><label for="ccidade"> Cidade:</label><input type="text"name="tcidade"id="ccidade" maxlength="40"size="30" placeholder="Sua Cidade" list="cidades" ></p>  
+   <datalist id="cidades">
+    <option value="Btu">Botucatu</option>
+    <option value="bauru">Bauru</option>
+    <option value="GSp">Grande São Paulo</option>
+
+
+   </datalist>
+</fieldset>
+<fieldset id="mensagem">
+<legend>Mensagem do Usuário</legend>
+   <p><label for="curgente"> Grau de Urgência:</label> <input type="range" id="curgente"name="turgente" min="0" max="10" step="2" ></p>
+
+
+   <p> Mensagem:</p><textarea name="tmens" id="cmens" cols="40" rows="5" placeholder="Deixe aqui sua mensagem!"></textarea>
+</fieldset>
+<fieldset id="pedido">
+<legend>Quero um Google Glass</legend>
+    <p><input type="checkbox" name="tPed"id="cPed" checked>
+        <label for="cPed"> Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cCor"> Cor: <input type="color" name="tCor" id="cCor" value="#0000ff"></label></p>
+
+    <p><label for="cQuant"> Quantidade:</label> <input type="number" name="tQuant" id="cQuant" min="0" max="1000" value="0"></p>
+   <p><label for="cPr"> Preço Total: R$ </label><input type="text" name="tPr" id="cPr"placeholder="Total a pagar" readonly></p>
+</fieldset>
+
+<a href="/cursoemvideo/html20016/projeto-glass-html5/index.html"><input type="image" title="tEnv" nome="tEnv" src="/_imagens/botao-enviar.png"></a>
+
+</form>
+</article>
+<footer id="roda-pe">
+    Copyright 2022 - by Alex Moreira <br>
+    Facebook | Twitter
+    </footer> 
+    </div> 
+    </body>
+    </html>
