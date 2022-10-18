@@ -29,14 +29,14 @@ fieldset#sexo {
     width: 300px;
 }
 fieldset#usuario{
-    background: url(/cursoemvideo/html20016/projeto-glass-html5/_imagens/icone-contato.png)no-repeat 95% 95%;
+    background: url(../imagens/icone-contato.png)no-repeat 95% 95%;
 }
 fieldset#endereco{
-    background: url(/cursoemvideo/html20016/projeto-glass-html5/_imagens/icone-endereco.png)no-repeat 95% 95%;
+    background: url(../imagens/icone-endereco.png)no-repeat 95% 95%;
 }
 fieldset#mensagem{
-    background: url(/cursoemvideo/html20016/projeto-glass-html5/_imagens/icone-mensagem.png)no-repeat 95% 95%;
+    background: url(../imagens/icone-mensagem.png)no-repeat 95% 95%;
 }
 fieldset#pedido{
-    background: url(/cursoemvideo/html20016/projeto-glass-html5/_imagens/icone-pagamento.png)no-repeat 95% 95%;
+    background: url(../imagens/icone-pagamento.png)no-repeat 95% 95%;
 }
