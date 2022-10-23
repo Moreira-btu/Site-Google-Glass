@@ -2,6 +2,36 @@
   font-family: 'fonte-logo';
   src: url(../fonts/bubblegum-sans-regular.otf);
 }
+  @media ( max-width:450px){
+    #body {
+      display:grid;
+      max-width:100vh;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    
+    #interface {
+      display: grid;
+      max-width: 80vw;
+      grid-template-columns: 1fr;
+    }
+    #menu {
+      display: grid;
+      max-width: 80vw;
+    
+      
+    }
+    #corpo {
+      display: grid;
+      max-width: 80vw;
+
+    }
+    #lateral {
+      display: grid;
+      max-width: 80vw;
+    }
+
+  }
   body{
     
     background-color: #dddddd;
@@ -51,11 +81,12 @@ header#cabecalho-artigo h3 {
   color:#606060 ;
 }
 .direita{ 
+  position: block;
   text-align: right;
 }
 
 aside#lateral{
-  display: block;
+  display:block;
   width: 600px;
   float: right;
   background-color: #dddddd;
